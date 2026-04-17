@@ -13,9 +13,31 @@ body {
     color: white;
 }
 
+/* NAVBAR */
+.nav {
+    position: fixed;
+    width: 100%;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.nav h2 {
+    color: gold;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
 /* HERO */
 .hero {
-    height: 90vh;
+    height: 100vh;
     background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat;
     display: flex;
     align-items: center;
@@ -24,12 +46,11 @@ body {
 }
 
 .hero h1 {
-    font-size: 42px;
+    font-size: 50px;
 }
 
 .hero p {
-    font-size: 18px;
-    margin: 10px 0;
+    font-size: 20px;
 }
 
 .btn {
@@ -37,13 +58,17 @@ body {
     background: gold;
     color: black;
     text-decoration: none;
-    font-weight: bold;
     border-radius: 5px;
+    transition: 0.3s;
 }
 
-/* DESTINATIONS */
+.btn:hover {
+    background: white;
+}
+
+/* CARDS */
 .section {
-    padding: 50px 20px;
+    padding: 60px 20px;
     text-align: center;
 }
 
@@ -55,10 +80,16 @@ body {
 }
 
 .card {
-    background: #1a1a1a;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
     padding: 20px;
-    width: 250px;
-    border-radius: 10px;
+    width: 260px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
 }
 
 .card img {
@@ -71,35 +102,45 @@ body {
     font-weight: bold;
 }
 
-/* WHATSAPP BUTTON */
+/* WHATSAPP */
 .whatsapp {
     position: fixed;
     bottom: 20px;
     right: 20px;
     background: #25D366;
-    color: white;
     padding: 15px;
     border-radius: 50%;
     font-size: 20px;
     text-decoration: none;
+    color: white;
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
+<div class="nav">
+    <h2>AEVORA</h2>
+    <div>
+        <a href="#">Home</a>
+        <a href="#">Packages</a>
+        <a href="#">Contact</a>
+    </div>
+</div>
+
 <!-- HERO -->
 <div class="hero">
     <div>
-        <h1>Plan Your Dream Vacation</h1>
-        <p>Bali • Dubai • Maldives | Luxury Travel Experts</p>
-        <a class="btn" href="https://wa.me/91XXXXXXXXXX">Get Quote on WhatsApp</a>
+        <h1>Luxury Travel, Perfected</h1>
+        <p>Bali • Dubai • Maldives | Handcrafted Experiences</p>
+        <a class="btn" href="https://wa.me/91XXXXXXXXXX">Plan My Trip</a>
     </div>
 </div>
 
 <!-- DESTINATIONS -->
 <div class="section">
-    <h2>Popular Packages</h2>
+    <h2>Signature Packages</h2>
 
     <div class="cards">
 
@@ -107,21 +148,21 @@ body {
             <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
             <h3>Bali</h3>
             <p>6N/7D Private Villa</p>
-            <p class="price">Starting ₹49,999</p>
+            <p class="price">₹49,999</p>
         </div>
 
         <div class="card">
             <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c">
             <h3>Dubai</h3>
             <p>5N/6D Luxury Trip</p>
-            <p class="price">Starting ₹39,999</p>
+            <p class="price">₹39,999</p>
         </div>
 
         <div class="card">
             <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb">
             <h3>Maldives</h3>
             <p>4N/5D Water Villa</p>
-            <p class="price">Starting ₹89,999</p>
+            <p class="price">₹89,999</p>
         </div>
 
     </div>
@@ -130,15 +171,15 @@ body {
 <!-- WHY US -->
 <div class="section">
     <h2>Why Choose Aevora</h2>
-    <p>✔ Best Prices Guaranteed</p>
+    <p>✔ Best Prices</p>
+    <p>✔ Personal Travel Expert</p>
     <p>✔ 24x7 Support</p>
-    <p>✔ Customized Packages</p>
 </div>
 
 <!-- TESTIMONIAL -->
 <div class="section">
     <h2>Happy Travelers</h2>
-    <p>"Best Bali trip ever! Everything was perfectly planned." ⭐⭐⭐⭐⭐</p>
+    <p>"Amazing experience, everything was seamless!" ⭐⭐⭐⭐⭐</p>
 </div>
 
 <!-- WHATSAPP -->
@@ -146,5 +187,3 @@ body {
 
 </body>
 </html>
-
-
