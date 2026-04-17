@@ -137,7 +137,47 @@ body {
         <a class="btn" href="https://wa.me/91XXXXXXXXXX">Plan My Trip</a>
     </div>
 </div>
+</div>  <!-- HERO END -->
 
+<!-- PASTE THIS 👇 -->
+<div class="section">
+    <h2>Get Your Custom Travel Plan</h2>
+
+    <form onsubmit="sendToWhatsApp(); return false;">
+        <input type="text" id="name" placeholder="Your Name" required><br><br>
+        <input type="text" id="destination" placeholder="Destination (Bali/Dubai/etc)" required><br><br>
+        <input type="text" id="budget" placeholder="Budget (Approx)" required><br><br>
+        <button class="btn" type="submit">Get Quote</button>
+    </form>
+</div>
+
+
+<script>
+function sendToWhatsApp() {
+    var name = document.getElementById("name").value;
+    var destination = document.getElementById("destination").value;
+    var budget = document.getElementById("budget").value;
+    
+    if (!name.trim() || !destination.trim() || !budget.trim()) {
+        alert("Please fill all fields");
+        return;
+    }
+
+    var message = encodeURIComponent(
+        "New Travel Inquiry:\n" +
+        "Name: " + name + "\n" +
+        "Destination: " + destination + "\n" +
+        "Budget: " + budget
+    );
+
+    window.open("https://wa.me/918826591126?text=" + message, "_blank");
+}
+</script>
+    
+
+
+
+<!-- DESTINATIONS -->
 <!-- DESTINATIONS -->
 <div class="section">
     <h2>Signature Packages</h2>
